@@ -1,0 +1,14 @@
+package br.com.fiap.testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestContatoBO {
+
+	@Test
+	public void criarTest() {
+		
+	}
+
+}

@@ -1,12 +1,27 @@
 package br.com.fiap.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Contato {
+public class Contato implements Serializable{
+	
 	private String nome;
 	private String email;
 	private List<String> telefones;
 	private String endereco;
+	
+	
+	public Contato() {
+	}
+
+	public Contato(String nome, String email, List<String> telefones,
+			String endereco) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.telefones = telefones;
+		this.endereco = endereco;
+	}
 
 	public String getNome() {
 		return nome;

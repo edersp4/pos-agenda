@@ -1,0 +1,31 @@
+package br.com.fiap.testes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import br.com.fiap.entity.Contato;
+
+public class TestContatoBO {
+
+	 Contato contato = null;
+	
+	 @Before
+	 public void criar(){
+		List<String>telefones = new ArrayList<String>();
+		
+		telefones.add("962652699");
+		telefones.add("47591890");
+		
+		contato = new Contato("Ederson da Silva", "edsilvasp@hotmail.com", telefones, "Rua barão de Studart n°100, Jardim Medina , Poá");
+		
+	}
+	
+	@Test
+	public void criarTest() {
+		
+	}
+
+}
