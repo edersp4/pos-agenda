@@ -3,7 +3,7 @@ package br.com.fiap.bo;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 
 import br.com.fiap.entity.Contato;
 
@@ -16,32 +16,40 @@ public class ContatoBO {
 	
 	public void gravarEmArquivo(Contato contato , String nomeArquivo){
 		FileOutputStream output = null;
-		ObjectOutputStream contatoStream = null;
-		
+		PrintWriter print = null;
+
 		try {
-			output = new FileOutputStream(nomeArquivo);
-			contatoStream = new ObjectOutputStream(output);
-			contatoStream.writeObject(contato);
+			output = new FileOutputStream(nomeArquivo , true);
+			print = new PrintWriter(output);
 			
+			print.write(contato.getNome() + "*");
+			print.write(contato.getEmail() + "*");
+			print.write(contato.getEndereco() + "*");
+			
+			for (String tel : contato.getTelefones()) {
+				print.write(tel + ">");
+			}
+			print.write("\r\n");
+			print.flush();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}finally{
-			if (output != null){
+			if(output != null){
 				try {
 					output.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
-			if (contatoStream != null) {
-				try {
-					contatoStream.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+
+			if(print != null){
+				print.close();
 			}
 		}
 	}
+	
+	public void listarContato(){
+		
+	}
+	
 }
