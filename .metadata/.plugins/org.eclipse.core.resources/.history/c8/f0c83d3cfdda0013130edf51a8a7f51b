@@ -1,0 +1,14 @@
+import javax.swing.JOptionPane;
+
+
+public class CadastroContato {
+	
+	public static void main(String[] args) {
+		
+		JOptionPane.showInputDialog("Favor digite o nome do Contato");
+		
+		
+	}
+	
+	
+}

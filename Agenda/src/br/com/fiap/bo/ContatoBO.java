@@ -1,5 +1,6 @@
 package br.com.fiap.bo;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class ContatoBO {
 		gravarEmArquivo(novoContato , "Contatos.txt");
 	}
 	
-	public void gravarEmArquivo(Contato contato , String nomeArquivo){
+	public static void gravarEmArquivo(Contato contato , String nomeArquivo){
 		FileOutputStream output = null;
 		PrintWriter print = null;
 
@@ -49,7 +50,12 @@ public class ContatoBO {
 	}
 	
 	public void listarContato(){
-		
+		FileInputStream input = null;
+		try {
+			input = new FileInputStream("Contatos.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 	
 }

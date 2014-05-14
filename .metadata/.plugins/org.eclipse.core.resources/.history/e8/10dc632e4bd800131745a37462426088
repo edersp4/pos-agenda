@@ -1,7 +1,0 @@
-package br.com.fiap.bo;
-
-public class ContatoBO {
-	public void criar(){
-		
-	}
-}
