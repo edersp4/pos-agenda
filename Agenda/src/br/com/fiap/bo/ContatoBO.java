@@ -1,10 +1,14 @@
 package br.com.fiap.bo;
 
-import java.io.FileInputStream;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.fiap.entity.Contato;
 
@@ -50,11 +54,50 @@ public class ContatoBO {
 	}
 	
 	public void listarContato(){
-		FileInputStream input = null;
+		FileReader read = null;
+		BufferedReader leitor = null;
+		String linha = "";
+		List<String[]> componentesContatos = new ArrayList<String[]>();
 		try {
-			input = new FileInputStream("Contatos.txt");
+			read = new FileReader("Contato.txt");
+			leitor = new BufferedReader(read);
+			
+			if(new File("C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/Contato.txt").isFile()){
+				System.out.println("Lendo arquivo ...");
+				while ((linha = leitor.readLine()) != null) {
+					String[]contato = linha.split("\\*");
+					
+					componentesContatos.add(contato);
+					
+					contato = null;
+				}
+			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		transformarEmObjeto(componentesContatos);
+		
+	}
+	
+	public void transformarEmObjeto(List<String[]> contatos){
+		
+		List<Contato>lista = new ArrayList<Contato>();
+		
+		for (String[] cont : contatos) {
+			Contato contato = new Contato();
+			
+			contato.setNome(cont[0]);
+			contato.setEmail(cont[1]);
+			contato.setEndereco(cont[2]);
+			
+//			TODO fazer a implementação para o telefone que é uma lista
+			
+			lista.add(contato);
+		}
+		for (Contato contato : lista) {
+			System.out.println(contato);
 		}
 	}
 	

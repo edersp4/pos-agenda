@@ -56,4 +56,13 @@ public class Contato implements Serializable{
 		this.endereco = endereco;
 	}
 
+	@Override
+	public String toString() {
+		return "Contato [nome=" + nome + ", email=" + email + ", telefones="
+				+ telefones + ", endereco=" + endereco + "]";
+	}
+	
+	
+	
+
 }

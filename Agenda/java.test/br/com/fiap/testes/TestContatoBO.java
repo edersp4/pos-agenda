@@ -6,6 +6,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.com.fiap.app.CadastroContato;
 import br.com.fiap.bo.ContatoBO;
 import br.com.fiap.entity.Contato;
 
@@ -26,9 +27,10 @@ public class TestContatoBO {
 	
 	@Test
 	public void criarTest() {
-		ContatoBO contatoBo = new ContatoBO();
+		ContatoBO contato = new ContatoBO();
 		
-		contatoBo.criar(contato);
+		contato.listarContato();
+		
 		
 	}
 
