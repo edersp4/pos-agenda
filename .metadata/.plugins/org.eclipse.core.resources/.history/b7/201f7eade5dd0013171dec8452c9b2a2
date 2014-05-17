@@ -84,7 +84,7 @@ public class ContatoBO {
 	public void transformarEmObjeto(List<String[]> contatos){
 		
 		List<Contato>lista = new ArrayList<Contato>();
-		String[] telefones ;
+		
 		for (String[] cont : contatos) {
 			Contato contato = new Contato();
 			
@@ -92,10 +92,8 @@ public class ContatoBO {
 			contato.setEmail(cont[1]);
 			contato.setEndereco(cont[2]);
 			
-			telefones = cont[3].split(">");
-			for (String tel : telefones) {
-				contato.getTelefones().add(tel);
-			}
+//			TODO fazer a implementação para o telefone que é uma lista
+			
 			lista.add(contato);
 		}
 		for (Contato contato : lista) {

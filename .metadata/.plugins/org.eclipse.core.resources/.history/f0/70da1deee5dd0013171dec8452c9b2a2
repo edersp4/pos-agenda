@@ -92,10 +92,11 @@ public class ContatoBO {
 			contato.setEmail(cont[1]);
 			contato.setEndereco(cont[2]);
 			
-			telefones = cont[3].split(">");
-			for (String tel : telefones) {
-				contato.getTelefones().add(tel);
+			
+			for (String string : cont) {
+				
 			}
+			
 			lista.add(contato);
 		}
 		for (Contato contato : lista) {

@@ -94,8 +94,9 @@ public class ContatoBO {
 			
 			telefones = cont[3].split(">");
 			for (String tel : telefones) {
-				contato.getTelefones().add(tel);
+				
 			}
+			
 			lista.add(contato);
 		}
 		for (Contato contato : lista) {
