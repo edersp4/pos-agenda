@@ -1,0 +1,20 @@
+package br.com.fiap.interfaces;
+
+import javax.swing.JOptionPane;
+
+public class ContatoInterface {
+	public void inicio(){
+		
+		int digito = 0;
+		
+		do{
+			digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite: 0- para Sair 1-Para gravar Contato -2 Para listar Contato"));
+		}while(digito == 0);
+	}
+	
+	public static void main(String[] args) {
+		ContatoInterface inter = new ContatoInterface();
+		
+	}
+	
+}

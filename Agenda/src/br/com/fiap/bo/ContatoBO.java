@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import br.com.fiap.comparador.ClassificaNome;
 import br.com.fiap.entity.Contato;
 
@@ -53,6 +55,8 @@ public class ContatoBO {
 				print.close();
 			}
 		}
+		
+		JOptionPane.showMessageDialog(null, "Contato criado com sucesso!");
 	}
 	
 	public List<Contato> listarContato(){
@@ -83,7 +87,7 @@ public class ContatoBO {
 		
 	}
 	
-	public List<Contato> transformarEmObjeto(List<String[]> contatos){
+	private List<Contato> transformarEmObjeto(List<String[]> contatos){
 		
 		List<Contato>lista = new ArrayList<Contato>();
 		String[] telefones ;
@@ -100,10 +104,6 @@ public class ContatoBO {
 			}
 			lista.add(contato);
 		}
-		for (Contato contato : lista) {
-			System.out.println(contato);
-		}
-		
 		return lista;
 	}
 	
@@ -124,5 +124,16 @@ public class ContatoBO {
 		Collections.sort(contatos, new ClassificaNome());
 		
 		return contatos;
+	}
+	
+	public void cadastrarContato(Contato contato1) {
+		Contato contato = new Contato();
+		
+		contato.setNome(contato1.getNome());
+		contato.setEmail(contato1.getEmail());
+		contato.setTelefones(contato1.getTelefones());
+		contato.setEndereco(contato1.getEndereco());
+		
+		ContatoBO.gravarEmArquivo(contato, "Contato.txt");
 	}
 }
