@@ -3,7 +3,11 @@ package br.com.fiap.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Atividade implements Serializable{
+/**
+ * @author usuario
+ * 
+ */
+public class Atividade implements Serializable {
 	private Date inicio;
 	private Date fim;
 	private String nome;

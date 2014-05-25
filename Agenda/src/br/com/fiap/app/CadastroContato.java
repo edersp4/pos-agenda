@@ -5,8 +5,15 @@ import br.com.fiap.bo.ContatoBO;
 import br.com.fiap.entity.Contato;
 
 
+/**
+ * @author usuario
+ *
+ */
 public class CadastroContato {
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Contato contato = new Contato();

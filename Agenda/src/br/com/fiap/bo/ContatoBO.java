@@ -8,8 +8,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import br.com.fiap.comparador.ClassificaNome;
 import br.com.fiap.entity.Contato;
 
 public class ContatoBO {
@@ -53,7 +55,7 @@ public class ContatoBO {
 		}
 	}
 	
-	public void listarContato(){
+	public List<Contato> listarContato(){
 		FileReader read = null;
 		BufferedReader leitor = null;
 		String linha = "";
@@ -77,11 +79,11 @@ public class ContatoBO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		transformarEmObjeto(componentesContatos);
+		return transformarEmObjeto(componentesContatos);
 		
 	}
 	
-	public void transformarEmObjeto(List<String[]> contatos){
+	public List<Contato> transformarEmObjeto(List<String[]> contatos){
 		
 		List<Contato>lista = new ArrayList<Contato>();
 		String[] telefones ;
@@ -101,6 +103,26 @@ public class ContatoBO {
 		for (Contato contato : lista) {
 			System.out.println(contato);
 		}
+		
+		return lista;
 	}
 	
+	public Contato pesquisarContato(String nome){
+		List<Contato>lista = listarContato();
+		Contato contato = new Contato();
+		
+		for (Contato cont : lista) {
+			if(cont.getNome().contains(nome)){
+				return contato;
+			}
+		}
+		return null;
+	}
+	
+	public List<Contato> classificarContatoPorNome() {
+		List<Contato> contatos = listarContato();
+		Collections.sort(contatos, new ClassificaNome());
+		
+		return contatos;
+	}
 }

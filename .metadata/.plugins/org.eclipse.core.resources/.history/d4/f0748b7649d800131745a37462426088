@@ -1,7 +1,0 @@
-package br.com.fiap.entity;
-
-public class Contato {
-	private String nome;
-	private String email;
-	private Listbr.com.fiap.entity
-}

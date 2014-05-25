@@ -1,6 +1,0 @@
-package br.com.fiap.entity;
-
-public class Atividade {
-	private Date inicio;
-	private Date fim;
-}

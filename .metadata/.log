@@ -88,3 +88,24 @@ HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
 HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
 	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1dd86e6),
 	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@17fa69,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@8d4d1c)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f5b0e4)),sourcePriority=1064961)
+!SESSION 2014-05-25 10:19:48.591 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-05-25 10:19:52.819
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2014-05-25 11:17:02.635
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2014-05-25 11:17:02.635
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@cf3b7f),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@1766b23,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1e07dc4)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c6e535)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@cf3b7f),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@1766b23,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1e07dc4)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c6e535)),sourcePriority=1064961)
