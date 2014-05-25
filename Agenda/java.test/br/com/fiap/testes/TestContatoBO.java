@@ -14,7 +14,7 @@ import br.com.fiap.bo.ContatoBO;
 import br.com.fiap.entity.Contato;
 
 /**
- * @author usuario
+ * @author Ederson da Silva
  *
  */
 public class TestContatoBO {

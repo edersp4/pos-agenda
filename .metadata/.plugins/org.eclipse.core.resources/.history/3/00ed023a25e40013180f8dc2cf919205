@@ -1,0 +1,95 @@
+package br.com.fiap.interfaces;
+
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bo.ContatoBO;
+import br.com.fiap.entity.Contato;
+
+public class ContatoInterface {
+	ContatoBO contatoBo = new ContatoBO();
+
+	public void inicio() {
+
+		int digito = 0;
+
+		do {
+			digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite: 0- para Sair; 1-Para gravar Contato; -2 Para listar Contato; 3-Para Pesquisar contato "));
+
+			switch (digito) {
+			case 1:
+				cadastrar();
+				break;
+			case 2:
+				listarContato();
+			}
+
+		} while (digito != 0);
+	}
+
+	public void cadastrar() {
+		Contato contato = new Contato();
+
+		contato.setNome(JOptionPane.showInputDialog("Favor digite o nome do Contato"));
+		contato.setEmail(JOptionPane.showInputDialog("Favor digite o email do Contato"));
+
+		int yes = 0;
+		do {
+			String telefone = JOptionPane.showInputDialog("Favor digitar o telefone");
+
+			contato.getTelefones().add(telefone);
+
+			yes = JOptionPane.showConfirmDialog(null, "Gostaria de inserir mais algum telefone");
+			System.out.println(yes);
+
+		} while (yes == 0);
+
+		contatoBo.cadastrarContato(contato);
+	}
+
+	public void listarContato(){
+		StringBuilder mensagem = new StringBuilder();
+		
+		List<Contato> contatos = contatoBo.listarContato(); 
+
+		if (contatos != null && contatos.size()!=0) {
+			for (Contato con : contatos) {
+				mensagem.append("----------- Nome " + con.getNome() + "-----------\n");
+				mensagem.append("email: " + con.getEmail() + "\n");
+				mensagem.append("Endereço: " + con.getEndereco() + "\n");
+				
+				for (String tel : con.getTelefones()) {
+					mensagem.append("Telefone: " + tel + "\n");
+				}
+			}
+		}else{
+			mensagem.append("Não existem contatos na lista");
+		}
+		JOptionPane.showMessageDialog(null, mensagem.toString());
+	}
+	
+	
+	public static void main(String[] args) {
+		ContatoInterface inter = new ContatoInterface();
+		inter.inicio();
+	}
+	
+	public void pesquisarContato() {
+		String nomeContato = JOptionPane.showInputDialog("Favor digitar o nome do Contato a ser pesquisado");
+		
+		Contato contato = contatoBo.pesquisarContato(nomeContato);
+		
+		if (contato != null ) {
+				mensagem.append("----------- Nome " + con.getNome() + "-----------\n");
+				mensagem.append("email: " + con.getEmail() + "\n");
+				mensagem.append("Endereço: " + con.getEndereco() + "\n");
+				mensagem.append("Telefone: " + tel + "\n");
+		}else{
+			mensagem.append("Não existem contatos na lista");
+		}
+		JOptionPane.showMessageDialog(null, mensagem.toString());
+		
+		
+	}
+}

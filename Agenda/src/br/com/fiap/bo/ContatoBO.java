@@ -16,13 +16,28 @@ import javax.swing.JOptionPane;
 import br.com.fiap.comparador.ClassificaNome;
 import br.com.fiap.entity.Contato;
 
+/**
+ * @author Ederson da Silva
+ *
+ */
 public class ContatoBO {
 	
+
+	/**
+	 * Cria o contato
+	 * @param contato - o contato a ser criado
+	 */
 	public void criar(Contato contato){
 		Contato novoContato = new Contato(contato.getNome(), contato.getEmail(), contato.getTelefones(), contato.getEndereco());
 		gravarEmArquivo(novoContato , "Contatos.txt");
 	}
 	
+	
+	/**
+	 * Pega o contato criado e grava no arquivo
+	 * @param contato - informações do contato a ser gravado
+	 * @param nomeArquivo - O nome do arquivo txt
+	 */
 	public static void gravarEmArquivo(Contato contato , String nomeArquivo){
 		FileOutputStream output = null;
 		PrintWriter print = null;
@@ -59,6 +74,10 @@ public class ContatoBO {
 		JOptionPane.showMessageDialog(null, "Contato criado com sucesso!");
 	}
 	
+	/**
+	 * Lê os registros no arquivo e coloca em uma lista de contatos
+	 * @return uma lista de contatos
+	 */
 	public List<Contato> listarContato(){
 		FileReader read = null;
 		BufferedReader leitor = null;
@@ -87,6 +106,13 @@ public class ContatoBO {
 		
 	}
 	
+	/**
+	 * Transforma os registros vindo do arquivo txt em um <br>
+	 * objeto do tipo Contato
+	 * @param contatos - Lista de contatos
+	 * @return lista de contatos
+	 */
+	
 	private List<Contato> transformarEmObjeto(List<String[]> contatos){
 		
 		List<Contato>lista = new ArrayList<Contato>();
@@ -107,18 +133,26 @@ public class ContatoBO {
 		return lista;
 	}
 	
+	/**
+	 * Pequisa o contato
+	 * @param nome - O nome do contato a ser pesquisado
+	 * @return O contato caso encontrado ou null caso não encontrado
+	 */
 	public Contato pesquisarContato(String nome){
 		List<Contato>lista = listarContato();
-		Contato contato = new Contato();
 		
 		for (Contato cont : lista) {
 			if(cont.getNome().contains(nome)){
-				return contato;
+				return cont;
 			}
 		}
 		return null;
 	}
 	
+	/**
+	 * Pega todos os registros e classifica pelo nome
+	 * @return Lista de contatos classificada pelo nome
+	 */
 	public List<Contato> classificarContatoPorNome() {
 		List<Contato> contatos = listarContato();
 		Collections.sort(contatos, new ClassificaNome());
@@ -126,6 +160,10 @@ public class ContatoBO {
 		return contatos;
 	}
 	
+	/**
+	 * Coloca as informações em um contato que vai ser gerado
+	 * @param contato1 - O contato que vai ser gerado
+	 */
 	public void cadastrarContato(Contato contato1) {
 		Contato contato = new Contato();
 		

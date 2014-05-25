@@ -1,0 +1,42 @@
+log4j.rootLogger=DEBUG, stdout, geral, error, cb, WS_IB_LAZ
+log4j.category.chubb.lazuw.domain.clientworkfolder.policy.webservices=WS_IB_LAZ
+
+log4j.category.org.apache.commons.digester=ERROR
+log4j.category.org.apache.commons.beanutils=ERROR
+log4j.category.net.sf.jasperreports=ERROR
+
+log4j.category.org.apache.axis=ERROR
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Threshold=DEBUG
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{HH:mm:ss} [%p]  - %C - %m %n
+
+log4j.appender.geral=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.geral.File=C:/lazuws/UWSJProd/DOCUMENTO_FISICO.log
+log4j.appender.geral.Threshold=DEBUG
+log4j.appender.geral.layout=org.apache.log4j.PatternLayout
+log4j.appender.geral.layout.ConversionPattern=%d{HH:mm:ss} [%p]  - %C - %m %n
+
+log4j.appender.error=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.error.File=C:/lazuws/UWSJProd/DOCUMENTO_FISICO_ERROR.log
+log4j.appender.error.Threshold=WARN
+log4j.appender.error.layout=org.apache.log4j.PatternLayout
+log4j.appender.error.layout.ConversionPattern=%d{ABSOLUTE} [%t] %-5p [%c{1} Linha:%2L] %m%n
+
+## Nível de log para arquivo
+log4j.appender.cb=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.cb.File=C:/lazuws/UWSJProd/central_bonus.log
+log4j.appender.cb.Threshold=ALL
+log4j.appender.cb.layout=org.apache.log4j.PatternLayout
+log4j.appender.cb.layout.ConversionPattern=%5p %-2d{dd/MM/yy HH:mm}  [%t]  %c - %m%n
+
+log4j.appender.WS_IB_LAZ=org.apache.log4j.RollingFileAppender
+log4j.appender.WS_IB_LAZ.File=C:/lazuws/UWSJProd/ws_ibroker_lazuws.log
+log4j.appender.WS_IB_LAZ.Append=true
+log4j.appender.WS_IB_LAZ.Threshold=ALL
+log4j.appender.WS_IB_LAZ.layout=org.apache.log4j.PatternLayout
+log4j.appender.WS_IB_LAZ.layout.ConversionPattern=%5p %-2d{dd/MM/yy HH:mm}  [%t]  %c - %m%n
+log4j.appender.WS_IB_LAZ.MaxFileSize=3072KB 
+log4j.appender.WS_IB_LAZ.MaxBackupIndex=10
+

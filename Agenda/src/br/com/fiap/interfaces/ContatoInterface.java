@@ -7,15 +7,23 @@ import javax.swing.JOptionPane;
 import br.com.fiap.bo.ContatoBO;
 import br.com.fiap.entity.Contato;
 
+/**
+ * @author Ederson da Silva
+ *
+ */
 public class ContatoInterface {
 	ContatoBO contatoBo = new ContatoBO();
 
+	/**
+	 * Interface inicial que mostra as opções de cadastrar,pesquisar , listar,<br>
+	 * e finalizar
+	 */
 	public void inicio() {
 
 		int digito = 0;
 
 		do {
-			digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite: 0- para Sair 1-Para gravar Contato -2 Para listar Contato"));
+			digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite: 0- para Sair; 1-Para gravar Contato; -2 Para listar Contato; 3-Para Pesquisar contato "));
 
 			switch (digito) {
 			case 1:
@@ -23,11 +31,17 @@ public class ContatoInterface {
 				break;
 			case 2:
 				listarContato();
+				break;
+			case 3:
+				pesquisarContato();
+				break;
 			}
-
 		} while (digito != 0);
 	}
 
+	/**
+	 * Interface que cadastra o contato
+	 */
 	public void cadastrar() {
 		Contato contato = new Contato();
 
@@ -48,6 +62,9 @@ public class ContatoInterface {
 		contatoBo.cadastrarContato(contato);
 	}
 
+	/**
+	 * Interface que lista o contato
+	 */
 	public void listarContato(){
 		StringBuilder mensagem = new StringBuilder();
 		
@@ -75,5 +92,27 @@ public class ContatoInterface {
 		inter.inicio();
 	}
 	
-	
+	/**
+	 * Interface que pesquisa o contato
+	 */
+	public void pesquisarContato() {
+		String nomeContato = JOptionPane.showInputDialog("Favor digitar o nome do Contato a ser pesquisado");
+
+		Contato contato = contatoBo.pesquisarContato(nomeContato);
+
+		StringBuilder mensagem = new StringBuilder();
+
+		if (contato != null) {
+			mensagem.append("----------- Nome " + contato.getNome() + "-----------\n");
+			mensagem.append("email: " + contato.getEmail() + "\n");
+			mensagem.append("Endereço: " + contato.getEndereco() + "\n");
+
+			for (String tel : contato.getTelefones()) {
+				mensagem.append("Telefone: " + tel + "\n");
+			}
+		} else {
+			mensagem.append("Não existe o contato pesquisado");
+		}
+		JOptionPane.showMessageDialog(null, mensagem.toString());
+	}
 }

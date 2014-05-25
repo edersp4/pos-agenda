@@ -6,6 +6,15 @@ import java.util.List;
 
 public class Contato implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @param nome - Nome do contato
+	 * @param email - Email do contato
+	 * @param telefones - telefones do contato
+	 * @param endereço - Endereço do contato
+	 */
+	
 	private String nome;
 	private String email;
 	private List<String> telefones = new ArrayList<String>();
