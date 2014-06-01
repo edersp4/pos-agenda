@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import br.com.fiap.bo.ContatoBO;
+import br.com.fiap.bo.GenericsBO;
 import br.com.fiap.entity.Contato;
 
 /**
@@ -12,7 +13,7 @@ import br.com.fiap.entity.Contato;
  *
  */
 public class ContatoInterface {
-	ContatoBO contatoBo = new ContatoBO();
+	GenericsBO<Contato> contatoBo = new ContatoBO();
 
 	/**
 	 * Interface inicial que mostra as opções de cadastrar,pesquisar , listar,<br>
@@ -47,7 +48,8 @@ public class ContatoInterface {
 
 		contato.setNome(JOptionPane.showInputDialog("Favor digite o nome do Contato"));
 		contato.setEmail(JOptionPane.showInputDialog("Favor digite o email do Contato"));
-
+		contato.setEndereco(JOptionPane.showInputDialog("Favor digite o endereço do Contato"));
+		
 		int yes = 0;
 		do {
 			String telefone = JOptionPane.showInputDialog("Favor digitar o telefone");
@@ -59,7 +61,7 @@ public class ContatoInterface {
 
 		} while (yes == 0);
 
-		contatoBo.cadastrarContato(contato);
+		((ContatoBO)contatoBo).cadastrarContato(contato);
 	}
 
 	/**
@@ -68,7 +70,7 @@ public class ContatoInterface {
 	public void listarContato(){
 		StringBuilder mensagem = new StringBuilder();
 		
-		List<Contato> contatos = contatoBo.listarContato(); 
+		List<Contato> contatos = contatoBo.listar(); 
 
 		if (contatos != null && contatos.size()!=0) {
 			for (Contato con : contatos) {
@@ -98,7 +100,7 @@ public class ContatoInterface {
 	public void pesquisarContato() {
 		String nomeContato = JOptionPane.showInputDialog("Favor digitar o nome do Contato a ser pesquisado");
 
-		Contato contato = contatoBo.pesquisarContato(nomeContato);
+		Contato contato = ((ContatoBO)contatoBo).pesquisarContato(nomeContato);
 
 		StringBuilder mensagem = new StringBuilder();
 

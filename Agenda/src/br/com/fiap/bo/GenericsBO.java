@@ -1,0 +1,13 @@
+package br.com.fiap.bo;
+
+import java.util.List;
+
+public interface GenericsBO <T>{
+	public abstract void gerarArquivo(T objeto , String name);
+	
+	public abstract List<T> listar();
+	
+	public abstract List<T> transformarEmObjeto(List<String[]> objetos);
+	
+	
+}

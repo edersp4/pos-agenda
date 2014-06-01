@@ -1,0 +1,6 @@
+package br.com.fiap.bo;
+
+public interface GenericsBO <T>{
+	public abstract void gerarArquivo(T);
+	
+}

@@ -35,7 +35,7 @@ public class TestContatoBO {
 	@Test
 	public void criarTest() {
 		ContatoBO contato = new ContatoBO();
-		contato.listarContato();
+		contato.listar();
 	}
 	 
 	 @Test

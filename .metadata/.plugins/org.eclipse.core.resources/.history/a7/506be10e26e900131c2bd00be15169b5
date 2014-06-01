@@ -1,0 +1,148 @@
+package br.com.fiap.bo;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.entity.Atividade;
+
+public class AtividadeBO implements GenericsBO<Atividade>{
+
+
+	public void gerarArquivo(Atividade atividade, String nome) {
+
+		
+		if (!existeCompromisso(atividade.getFim())) {
+			incluir(atividade, nome);
+		}
+		else{
+			int aceite = JOptionPane.showConfirmDialog(null, "Existe compromisso agendado para esta data! \nDeseja continuar?");
+			if (aceite == 0) {
+				incluir(atividade, nome);
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Compromisso concelado");
+			}
+		}
+	}
+	
+	private void incluir(Atividade atividade, String nome){
+		
+		FileOutputStream out = null;
+		PrintWriter pw = null;
+		
+		try {
+			out = new FileOutputStream(nome, true);
+			pw = new PrintWriter(out);
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			
+			pw.write(atividade.getNome() + "*");
+			pw.write(atividade.getLocal() + "*");
+			pw.write(sdf.format(atividade.getInicio()) + "*");
+			pw.write(sdf.format(atividade.getFim()) + "*");
+
+			pw.write("\r\n");
+			pw.flush();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			if (out != null) {
+				try {
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pw != null) {
+				pw.close();
+			}
+		}
+		
+	}
+	
+	public boolean existeCompromisso(Date comeco){
+		
+		boolean retorno = false;
+		List<Atividade> lista = listarAtividades();
+		for (Atividade atividade : lista) {
+			retorno = atividade.getFim().compareTo(comeco) == 1 || atividade.getFim().compareTo(comeco) == 0;
+		}
+		
+		return retorno;
+	}
+
+	public List<Atividade> listarAtividades() {
+
+		FileReader reader = null;
+		BufferedReader bf = null;
+		String linha = "";
+		List<String[]> atividades = new ArrayList<String[]>();
+		try {
+			reader =  new FileReader("C:/Atividades.txt");
+			bf = new BufferedReader(reader);
+
+			if (new File(
+					"C:/Atividades.txt").isFile()) {
+				while ((linha = bf.readLine()) != null && !linha.isEmpty()) {
+					String[] atividade = linha.split("\\*");
+
+					atividades.add(atividade);
+
+					atividade = null;
+				}
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return transformarEmObjeto(atividades);
+
+	}
+
+	public List<Atividade> transformarEmObjeto(List<String[]> contatos) {
+
+		List<Atividade> lista = new ArrayList<Atividade>();
+		for (String[] cont : contatos) {
+			Atividade atividade = new Atividade();
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+			atividade.setNome(cont[0]);
+			atividade.setLocal(cont[1]);
+			try {
+				atividade.setInicio(sdf.parse(cont[2]));
+				atividade.setFim(sdf.parse(cont[3]));
+			} catch (ParseException e) {
+					e.printStackTrace();
+				}
+
+			lista.add(atividade);
+		}
+		return lista;
+	}
+
+	@Override
+	public List<Atividade> listar() {
+		return null;
+	}
+
+	@Override
+	public List<Atividade> transformarEmObjeto() {
+		return null;
+	}
+
+}

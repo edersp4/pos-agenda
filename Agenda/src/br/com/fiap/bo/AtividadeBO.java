@@ -16,9 +16,8 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import br.com.fiap.entity.Atividade;
-import br.com.fiap.entity.Contato;
 
-public class AtividadeBO {
+public class AtividadeBO implements GenericsBO<Atividade>{
 
 
 	public void gerarArquivo(Atividade atividade, String nome) {
@@ -77,7 +76,7 @@ public class AtividadeBO {
 	public boolean existeCompromisso(Date comeco){
 		
 		boolean retorno = false;
-		List<Atividade> lista = listarAtividades();
+		List<Atividade> lista = listar();
 		for (Atividade atividade : lista) {
 			retorno = atividade.getFim().compareTo(comeco) == 1 || atividade.getFim().compareTo(comeco) == 0;
 		}
@@ -85,20 +84,19 @@ public class AtividadeBO {
 		return retorno;
 	}
 
-	@SuppressWarnings("resource")
-	public List<Atividade> listarAtividades() {
+	@Override
+	public List<Atividade> listar() {
 
 		FileReader reader = null;
 		BufferedReader bf = null;
 		String linha = "";
 		List<String[]> atividades = new ArrayList<String[]>();
 		try {
-			reader =  new FileReader("Atividades.txt");
+			reader =  new FileReader("C:/Atividades.txt");
 			bf = new BufferedReader(reader);
 
 			if (new File(
-					"C:/Users/AlexF/workspace/Agenda/Atividades.txt")
-					.isFile()) {
+					"C:/Atividades.txt").isFile()) {
 				while ((linha = bf.readLine()) != null && !linha.isEmpty()) {
 					String[] atividade = linha.split("\\*");
 
@@ -116,27 +114,26 @@ public class AtividadeBO {
 		return transformarEmObjeto(atividades);
 
 	}
-
-	public List<Atividade> transformarEmObjeto(List<String[]> contatos) {
+	
+	@Override
+	public List<Atividade> transformarEmObjeto(List<String[]> atividades) {
 
 		List<Atividade> lista = new ArrayList<Atividade>();
-		for (String[] cont : contatos) {
+		for (String[] ativ : atividades) {
 			Atividade atividade = new Atividade();
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-			atividade.setNome(cont[0]);
-			atividade.setLocal(cont[1]);
+			atividade.setNome(ativ[0]);
+			atividade.setLocal(ativ[1]);
 			try {
-				atividade.setInicio(sdf.parse(cont[2]));
-				atividade.setFim(sdf.parse(cont[3]));
+				atividade.setInicio(sdf.parse(ativ[2]));
+				atividade.setFim(sdf.parse(ativ[3]));
 			} catch (ParseException e) {
 					e.printStackTrace();
 				}
 
 			lista.add(atividade);
 		}
-		
 		return lista;
 	}
-
 }
