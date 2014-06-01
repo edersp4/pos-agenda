@@ -1,12 +1,12 @@
 package br.com.fiap.interfaces;
 
 import java.util.List;
-
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
 import br.com.fiap.bo.ContatoBO;
 import br.com.fiap.bo.GenericsBO;
 import br.com.fiap.entity.Contato;
+import br.com.fiap.enun.AcaoEnum;
 
 /**
  * @author Ederson da Silva
@@ -14,7 +14,7 @@ import br.com.fiap.entity.Contato;
  */
 public class ContatoInterface extends Thread{
 	GenericsBO<Contato> contatoBo = new ContatoBO();
-
+	Logger log = Logger.getLogger(ContatoInterface.class.getName());
 	/**
 	 * Interface inicial que mostra as opções de cadastrar,pesquisar , listar,<br>
 	 * e finalizar
@@ -24,30 +24,38 @@ public class ContatoInterface extends Thread{
 	public void run() {
 		iniciar();
 	}
+	
 	public void iniciar() {
 
 		int digito = 0;
 
+		AcaoEnum acaoEnum = null;
+		
 		do {
 			
 			try {
-				digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n0- para Sair\n1-Para gravar Contato\n2-Para listar Contato\n3-Para Pesquisar contato "));
+				digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n0- para Sair\n1-Para gravar Contato\n2-Para listar Contato\n3-Para Pesquisar contato\n4-Ordernar por nome "));
 			} catch (NumberFormatException e) {
 				digito = 0;
 			}
 			
-			switch (digito) {
-			case 1:
+			acaoEnum = AcaoEnum.getEnumPeloCodigo(digito);
+			switch (acaoEnum) {
+			case GRAVAR:
 				cadastrar();
 				break;
-			case 2:
+			case LISTAR:
 				listarContato();
 				break;
-			case 3:
+			case PESQUISAR:
 				pesquisarContato();
+			case CLASSIFICAR:
+				classificarPorNome();	
 				break;
 			}
-		} while (digito != 0);
+		} while (acaoEnum != AcaoEnum.SAIR);
+		
+		log.info("Aplicação encerrada");
 	}
 
 	/**
@@ -94,6 +102,7 @@ public class ContatoInterface extends Thread{
 			}
 		}else{
 			mensagem.append("Não existem contatos na lista");
+			log.warning(mensagem.toString());
 		}
 		JOptionPane.showMessageDialog(null, mensagem.toString());
 	}
@@ -126,5 +135,10 @@ public class ContatoInterface extends Thread{
 			mensagem.append("Não existe o contato pesquisado");
 		}
 		JOptionPane.showMessageDialog(null, mensagem.toString());
+	}
+	
+	public void classificarPorNome(){
+		((ContatoBO)contatoBo).classificarContatoPorNome();
+		JOptionPane.showMessageDialog(null, "Classificado com sucesso!");
 	}
 }

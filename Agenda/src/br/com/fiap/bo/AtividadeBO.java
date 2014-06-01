@@ -17,9 +17,17 @@ import javax.swing.JOptionPane;
 
 import br.com.fiap.entity.Atividade;
 
+/**
+ * @author AlexF
+ *
+ */
 public class AtividadeBO implements GenericsBO<Atividade>{
 
 
+	/** Grava as Atividades em arquivo
+	 * @param atividade
+	 * @param nome
+	 */
 	public void gerarArquivo(Atividade atividade, String nome) {
 
 		
@@ -37,8 +45,11 @@ public class AtividadeBO implements GenericsBO<Atividade>{
 		}
 	}
 	
-	private void incluir(Atividade atividade, String nome){
-		
+	/** Inclui uma nova atividade
+	 * @param atividade
+	 * @param nome
+	 */
+	private void incluir(Atividade atividade, String nome){ 
 		FileOutputStream out = null;
 		PrintWriter pw = null;
 		
@@ -73,6 +84,10 @@ public class AtividadeBO implements GenericsBO<Atividade>{
 		
 	}
 	
+	/**Verifica se existe compromisso para a mesma data
+	 * @param comeco
+	 * @return
+	 */
 	public boolean existeCompromisso(Date comeco){
 		
 		boolean retorno = false;
@@ -84,6 +99,9 @@ public class AtividadeBO implements GenericsBO<Atividade>{
 		return retorno;
 	}
 
+	/**Lista as atividades a 
+	 * @return lista de Atividades
+	 */
 	@Override
 	public List<Atividade> listar() {
 
@@ -114,7 +132,10 @@ public class AtividadeBO implements GenericsBO<Atividade>{
 		return transformarEmObjeto(atividades);
 
 	}
-	
+	/**Transforma as informacoes do txt em um objeto atividade
+	 * @param contatos
+	 * @return
+	 */
 	@Override
 	public List<Atividade> transformarEmObjeto(List<String[]> atividades) {
 

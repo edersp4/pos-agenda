@@ -1,0 +1,16 @@
+package br.com.fiap.interfaces;
+
+ /**
+ * @author Ederson da Silva
+ * Inicia as duas telas a de atividade e de contatos para<br>
+ * o usuário cadastrar uma das duas operações
+ */
+public class InicioAplicacao {
+	public static void main(String[] args) {
+//		AtividadeInterface atividade = new AtividadeInterface();
+		ContatoInterface contato = new ContatoInterface();
+
+//		atividade.start();
+		contato.start();
+	}
+}

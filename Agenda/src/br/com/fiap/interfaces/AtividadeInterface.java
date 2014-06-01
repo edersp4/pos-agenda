@@ -4,21 +4,27 @@ import java.awt.HeadlessException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
 import br.com.fiap.bo.AtividadeBO;
 import br.com.fiap.bo.GenericsBO;
 import br.com.fiap.entity.Atividade;
+import br.com.fiap.enun.AcaoEnum;
 
 public class AtividadeInterface extends Thread {
 	
 	GenericsBO<Atividade> atividadeBO = new AtividadeBO();
-	
+	Logger logger = Logger.getLogger(AtividadeInterface.class.getName());
+
+	/**
+	 * Inicia a interface de gerenciamento de atividades
+	 */
 	public void iniciar(){
 		
 		int acao = 0;
-		
+		AcaoEnum acaoEnum = null;
 		do {
 			try {
 				acao = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n 0- para Sair;\n 1-Para gravar Atividade\n 2 Para listar Atividade; "));
@@ -26,18 +32,19 @@ public class AtividadeInterface extends Thread {
 				acao = 0;
 			}
 			
-			switch (acao) {
-			case 1:
+			acaoEnum = AcaoEnum.getEnumPeloCodigo(acao);
+			switch (acaoEnum) {
+			case GRAVAR:
 				cadastrar();
 				break;
-			case 2:
+			case LISTAR:
 				listarAtividade();
 				break;
 			default:
 				break;
 			}
-		} while (acao != 0);
-		
+		} while (acaoEnum != AcaoEnum.SAIR);
+		logger.info("Aplicação encerrada");
 	}
 
 	@Override
@@ -45,6 +52,9 @@ public class AtividadeInterface extends Thread {
 		iniciar();
 	}
 
+	/**
+	 * Lista as atividades existentes no arquivo .txt
+	 */
 	private void listarAtividade() {
 		StringBuilder mensagem = new StringBuilder();
 		
@@ -59,11 +69,16 @@ public class AtividadeInterface extends Thread {
 			}
 		}else{
 			mensagem.append("Não existem atividades programadas!");
+			logger.warning(mensagem.toString());
 		}
 		JOptionPane.showMessageDialog(null, mensagem);
 		
+		
 	}
 
+	/**
+	 * captura as informacoes inseridas pelo usuário e adiciona ao arquivo .txt
+	 */
 	private void cadastrar() {
 		
 		Atividade atv = new Atividade();

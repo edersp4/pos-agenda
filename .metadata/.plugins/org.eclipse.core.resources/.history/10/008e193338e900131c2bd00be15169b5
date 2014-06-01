@@ -1,0 +1,18 @@
+package br.com.fiap.bo;
+
+import java.util.List;
+/**
+ * 
+ * @author Ederson da Silva
+ *
+ * @param <T> a classe que será utilizada para fazer as operações
+ */
+public interface GenericsBO <T>{
+	public abstract void gerarArquivo(T objeto , String name);
+	
+	public abstract List<T> listar();
+	
+	public abstract List<T> transformarEmObjeto(List<String[]> objetos);
+	
+	
+}

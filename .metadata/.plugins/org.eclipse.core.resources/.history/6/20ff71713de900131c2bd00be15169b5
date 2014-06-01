@@ -1,0 +1,20 @@
+package br.com.fiap.enun;
+
+
+public enum AcaoEnum {
+		SAIR(0),GRAVAR(1),LISTAR(2),PESQUISAR(3),CLASSIFICAR(4);
+	
+		private int codigo;
+		
+		private AcaoEnum(int codigo) {
+			this.codigo = codigo;
+		}
+		
+		public static AcaoEnum getEnumPeloCodigo(int codigo){
+			for (AcaoEnum acao : values()) {
+				if(acao.codigo == codigo )
+					return acao;
+			}
+			return null;
+		}
+}

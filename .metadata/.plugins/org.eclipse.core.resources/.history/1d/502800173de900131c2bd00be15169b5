@@ -1,0 +1,161 @@
+package br.com.fiap.interfaces;
+
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bo.ContatoBO;
+import br.com.fiap.bo.GenericsBO;
+import br.com.fiap.entity.Contato;
+import br.com.fiap.interfaces.AtividadeInterface.AcaoEnum;
+
+/**
+ * @author Ederson da Silva
+ *
+ */
+public class ContatoInterface extends Thread{
+	GenericsBO<Contato> contatoBo = new ContatoBO();
+
+	/**
+	 * Interface inicial que mostra as opções de cadastrar,pesquisar , listar,<br>
+	 * e finalizar
+	 */
+	
+	@Override
+	public void run() {
+		iniciar();
+	}
+	
+	enum AcaoEnum{
+		SAIR(0),GRAVAR(1),LISTAR(2),PESQUISAR(3),CLASSIFICAR(4);
+	
+		private int codigo;
+		
+		private AcaoEnum(int codigo) {
+			this.codigo = codigo;
+		}
+		
+		public static AcaoEnum getEnumPeloCodigo(int codigo){
+			for (AcaoEnum acao : values()) {
+				if(acao.codigo == codigo )
+					return acao;
+			}
+			return null;
+		}
+	}
+	
+	
+	public void iniciar() {
+
+		int digito = 0;
+
+		AcaoEnum acaoEnum = null;
+		
+		do {
+			
+			try {
+				digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n0- para Sair\n1-Para gravar Contato\n2-Para listar Contato\n3-Para Pesquisar contato\n4-Ordernar por nome "));
+			} catch (NumberFormatException e) {
+				digito = 0;
+			}
+			
+			acaoEnum = AcaoEnum.getEnumPeloCodigo(digito);
+			switch (acaoEnum) {
+			case GRAVAR:
+				cadastrar();
+				break;
+			case 2:
+				listarContato();
+				break;
+			case 3:
+				pesquisarContato();
+			case 4:
+				classificarPorNome();	
+				break;
+			}
+		} while (digito != 0);
+	}
+
+	/**
+	 * Interface que cadastra o contato
+	 */
+	public void cadastrar() {
+		Contato contato = new Contato();
+
+		contato.setNome(JOptionPane.showInputDialog("Favor digite o nome do Contato"));
+		contato.setEmail(JOptionPane.showInputDialog("Favor digite o email do Contato"));
+		contato.setEndereco(JOptionPane.showInputDialog("Favor digite o endereço do Contato"));
+		
+		int yes = 0;
+		do {
+			String telefone = JOptionPane.showInputDialog("Favor digitar o telefone");
+
+			contato.getTelefones().add(telefone);
+
+			yes = JOptionPane.showConfirmDialog(null, "Gostaria de inserir mais algum telefone");
+			System.out.println(yes);
+
+		} while (yes == 0);
+
+		((ContatoBO)contatoBo).cadastrarContato(contato);
+	}
+
+	/**
+	 * Interface que lista o contato
+	 */
+	public void listarContato(){
+		StringBuilder mensagem = new StringBuilder();
+		
+		List<Contato> contatos = contatoBo.listar(); 
+
+		if (contatos != null && contatos.size()!=0) {
+			for (Contato con : contatos) {
+				mensagem.append("----------- Nome " + con.getNome() + "-----------\n");
+				mensagem.append("email: " + con.getEmail() + "\n");
+				mensagem.append("Endereço: " + con.getEndereco() + "\n");
+				
+				for (String tel : con.getTelefones()) {
+					mensagem.append("Telefone: " + tel + "\n");
+				}
+			}
+		}else{
+			mensagem.append("Não existem contatos na lista");
+		}
+		JOptionPane.showMessageDialog(null, mensagem.toString());
+	}
+	
+	
+	public static void main(String[] args) {
+		ContatoInterface inter = new ContatoInterface();
+		inter.iniciar();
+	}
+	
+	/**
+	 * Interface que pesquisa o contato
+	 */
+	public void pesquisarContato() {
+		String nomeContato = JOptionPane.showInputDialog("Favor digitar o nome do Contato a ser pesquisado");
+
+		Contato contato = ((ContatoBO)contatoBo).pesquisarContato(nomeContato);
+
+		StringBuilder mensagem = new StringBuilder();
+
+		if (contato != null) {
+			mensagem.append("----------- Nome " + contato.getNome() + "-----------\n");
+			mensagem.append("email: " + contato.getEmail() + "\n");
+			mensagem.append("Endereço: " + contato.getEndereco() + "\n");
+
+			for (String tel : contato.getTelefones()) {
+				mensagem.append("Telefone: " + tel + "\n");
+			}
+		} else {
+			mensagem.append("Não existe o contato pesquisado");
+		}
+		JOptionPane.showMessageDialog(null, mensagem.toString());
+	}
+	
+	public void classificarPorNome(){
+		((ContatoBO)contatoBo).classificarContatoPorNome();
+		JOptionPane.showMessageDialog(null, "Classificado com sucesso!");
+	}
+}
