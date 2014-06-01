@@ -4,20 +4,24 @@
 		<item value="true" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE"/>
 		<item value="450" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH"/>
 		<item value="false" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION"/>
-		<item value="509" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT"/>
+		<item value="510" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT"/>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.views"/>
 			<item value="org.eclipse.ui.views"/>
 			<item value="org.eclipse.ui.views"/>
 		</list>
 		<list key="textArray">
+			<item value="explore"/>
 			<item value="conso"/>
 			<item value="junit"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.PackageExplorer"/>
 			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.jdt.junit.ResultView"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
 			<item value="1"/>
 			<item value="1"/>
 		</list>
@@ -27,11 +31,10 @@
 		<item value="331" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.ui.wizards.new.folder" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.debug.ui.java"/>
-			<item value="org.eclipse.pde.PDE"/>
 		</list>
 	</section>
 </section>

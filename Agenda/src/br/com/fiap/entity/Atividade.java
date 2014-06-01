@@ -3,15 +3,24 @@ package br.com.fiap.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author usuario
- * 
- */
-public class Atividade implements Serializable {
+public class Atividade implements Serializable{
 	private Date inicio;
 	private Date fim;
 	private String nome;
 	private String local;
+	
+	
+
+	public Atividade(Date inicio, Date fim, String nome, String local) {
+		super();
+		this.inicio = inicio;
+		this.fim = fim;
+		this.nome = nome;
+		this.local = local;
+	}
+	public Atividade() {
+		
+	}
 
 	public String getNome() {
 		return nome;

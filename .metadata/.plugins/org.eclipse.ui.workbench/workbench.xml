@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="64" version="2.0">
+<workbench progressCount="29" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="150" y="150">
+<window height="768" maximized="true" minimized="true" width="1024" x="150" y="150">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,7 +14,7 @@
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -22,6 +22,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -38,53 +41,64 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoBO.java" partName="ContatoBO.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/bo/ContatoBO.java" title="ContatoBO.java" tooltip="Agenda/src/br/com/fiap/bo/ContatoBO.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2717" selectionTopPixel="675"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoInterface.java" partName="ContatoInterface.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/interfaces/ContatoInterface.java" title="ContatoInterface.java" tooltip="Agenda/src/br/com/fiap/interfaces/ContatoInterface.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/interfaces/ContatoInterface.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="642"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Contato.java" partName="Contato.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/entity/Contato.java" title="Contato.java" tooltip="Agenda/src/br/com/fiap/entity/Contato.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/entity/Contato.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1246" selectionTopPixel="3"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClassificaNome.java" partName="ClassificaNome.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/comparador/ClassificaNome.java" title="ClassificaNome.java" tooltip="Agenda/src/br/com/fiap/comparador/ClassificaNome.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/comparador/ClassificaNome.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoBO.java" partName="ContatoBO.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/bo/ContatoBO.java" title="ContatoBO.java" tooltip="Agenda/src/br/com/fiap/bo/ContatoBO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestContatoBO.java" partName="TestContatoBO.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/java.test/br/com/fiap/testes/TestContatoBO.java" title="TestContatoBO.java" tooltip="Agenda/java.test/br/com/fiap/testes/TestContatoBO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/java.test/br/com/fiap/testes/TestContatoBO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="563" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="361" selectionTopPixel="3"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CadastroContato.java" partName="CadastroContato.java" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/br/com/fiap/app/CadastroContato.java" title="CadastroContato.java" tooltip="Agenda/src/br/com/fiap/app/CadastroContato.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/br/com/fiap/app/CadastroContato.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="849" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="log4j.properties" partName="log4j.properties" path="C:/Users/usuario/Documents/GitHub/pos-agenda/Agenda/src/log4j.properties" title="log4j.properties" tooltip="Agenda/src/log4j.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Agenda/src/log4j.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1288" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
 <viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
 </view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+</viewState>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
-</view>
 <view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
-<expanded>&#x0A;<category IMemento.internal.id="Java Problems"/>
-<category IMemento.internal.id="Java Line Breakpoints"/>
-<category IMemento.internal.id="Java Exception Breakpoints"/>
-<category IMemento.internal.id="Java Build Path Problems"/>
+<expanded>
+<category IMemento.internal.id="Java Problems (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.allSeverityField="273" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
@@ -96,6 +110,7 @@
 </view>
 <view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>&#x0A;<category IMemento.internal.id="Warnings (3 items)"/>
@@ -108,10 +123,14 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
@@ -139,9 +158,6 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
 <sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
@@ -158,13 +174,13 @@
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers">
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
-<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
@@ -220,34 +236,22 @@
 <perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="topLeft" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="1024" id="bottomRight" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.AllMarkersView" ratio="0.3"/>
-<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
-<view id="org.eclipse.wst.server.ui.ServersView" ratio="0.3"/>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" ratio="0.3"/>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" ratio="0.3"/>
-<view id="org.eclipse.jdt.junit.ResultView" ratio="0.4"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-</fastViewBars>
+<view id="org.eclipse.ui.views.AllMarkersView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
@@ -264,27 +268,47 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottomRight" ratio="0.69860893" ratioLeft="452" ratioRight="195" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.views.AllMarkersView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
-<page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
-<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.7" ratioLeft="525" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@9c007e" ratio="0.5" ratioLeft="125" ratioRight="125" relationship="2" relative="topLeft">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -337,22 +361,31 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7495895" ratioLeft="913" ratioRight="305" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7495895" ratioLeft="913" ratioRight="305" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74971557" ratioLeft="659" ratioRight="220" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74971557" ratioLeft="659" ratioRight="220" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -361,24 +394,31 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44848484" ratioLeft="296" ratioRight="364" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7495895" ratioLeft="913" ratioRight="305" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7495895" ratioLeft="913" ratioRight="305" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="609" ratioRight="609" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="609" ratioRight="609" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -502,164 +542,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/interfaces/ContatoInterface.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/java.test/br/com/fiap/testes/TestContatoBO.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/app/CadastroContato.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Agenda/Contato.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/comparador/ClassificaNome.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/entity/Atividade.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/entity/Contato.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/entity/Contato.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/app/CadastroContato.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Agenda/java.test/br/com/fiap/testes/TestContatoBO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Agenda/src/log4j.properties"/>
 </editors>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1418" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1451" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1473" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1549" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1591" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1635" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1729" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1775" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1826" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1877" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1924" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="1775" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2082" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2202" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2276" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2312" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2354" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2384" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2415" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2454" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2490" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2525" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2490" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2525" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2490" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2525" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2490" y="0"/>
+<item historyLabel="ContatoInterface.java" index="0">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2569" y="0"/>
+<item historyLabel="ContatoInterface.java" index="0">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2276" y="0"/>
+<item historyLabel="Contato.txt" index="2">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2598" y="0"/>
+<item historyLabel="ContatoInterface.java" index="0">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2633" y="0"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2598" y="0"/>
-</item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2671" y="0"/>
-</item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2131" y="0"/>
-</item>
-<item historyLabel="CadastroContato.java" index="2">
-<position info="not_deleted" x="890" y="0"/>
-</item>
-<item historyLabel="Contato.txt" index="3">
+<item historyLabel="Contato.txt" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Contato.txt" index="3">
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
+</item>
+<item historyLabel="ContatoInterface.java" index="0">
+<position/>
+</item>
+<item historyLabel="ContatoBO.java" index="1">
+<position/>
+</item>
+<item historyLabel="ContatoInterface.java" index="0">
+<position info="not_deleted" x="200" y="0"/>
+</item>
+<item historyLabel="ClassificaNome.java" index="3">
+<position/>
+</item>
+<item historyLabel="ContatoBO.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Contato.java" index="4">
-<position info="not_deleted" x="1246" y="0"/>
-</item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2131" y="0"/>
-</item>
-<item historyLabel="TestContatoBO.java" index="1">
-<position info="not_deleted" x="608" y="0"/>
-</item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2131" y="0"/>
-</item>
-<item historyLabel="Contato.txt" index="3">
+<item historyLabel="ClassificaNome.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="2131" y="0"/>
+<item historyLabel="Atividade.java" index="4">
+<position info="not_deleted" x="173" y="0"/>
 </item>
-<item historyLabel="CadastroContato.java" index="2">
-<position info="not_deleted" x="828" y="0"/>
+<item historyLabel="ClassificaNome.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ContatoBO.java" index="0">
-<position info="not_deleted" x="400" y="122"/>
-</item>
-<item historyLabel="TestContatoBO.java" index="1">
-<position info="not_deleted" x="608" y="2"/>
+<item historyLabel="ContatoBO.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="Contato.java" index="5">
-<position info="not_deleted" x="1246" y="0"/>
+<position info="not_deleted" x="373" y="0"/>
 </item>
-<item historyLabel="CadastroContato.java" index="6">
-<position info="not_deleted" x="828" y="0"/>
+<item historyLabel="ContatoInterface.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ContatoBO.java" index="7">
-<position info="not_deleted" x="400" y="122"/>
+<item historyLabel="Contato.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="ContatoBO.java" index="7">
-<position info="not_deleted" x="2711" y="0"/>
+<item historyLabel="ClassificaNome.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ContatoBO.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestContatoBO.java" index="6">
+<position info="not_deleted" x="361" y="0"/>
+</item>
+<item historyLabel="ContatoInterface.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="log4j.properties" index="7">
+<position info="not_deleted" x="1288" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -670,9 +710,13 @@
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.PerspectiveSwitcher"/>
 <trimItem IMemento.internal.id="topLeft"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@9c007e"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="topRight"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ToolsFolderView"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.OutlineFolderView"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -683,42 +727,52 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
 <trimItem IMemento.internal.id="bottomRight"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Contato.txt" tooltip="Agenda/Contato.txt">
-<persistable path="/Agenda/Contato.txt"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ReflectiveCallable.class" tooltip="org.junit.internal.runners.model.ReflectiveCallable">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/D:\/Eclipse1\/eclipse indigo\/plugins\/org.junit_4.8.2.v4_8_2_v20110321-1705\/junit.jar&lt;org.junit.internal.runners.model(ReflectiveCallable.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CadastroContato.java" tooltip="Agenda/src/br/com/fiap/app/CadastroContato.java">
-<persistable path="/Agenda/src/br/com/fiap/app/CadastroContato.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="log4j.properties" tooltip="Agenda/src/log4j.properties">
+<persistable path="/Agenda/src/log4j.properties"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestContatoBO.java" tooltip="Agenda/java.test/br/com/fiap/testes/TestContatoBO.java">
 <persistable path="/Agenda/java.test/br/com/fiap/testes/TestContatoBO.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoBO.java" tooltip="Agenda/src/br/com/fiap/bo/ContatoBO.java">
+<persistable path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClassificaNome.java" tooltip="Agenda/src/br/com/fiap/comparador/ClassificaNome.java">
+<persistable path="/Agenda/src/br/com/fiap/comparador/ClassificaNome.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Contato.java" tooltip="Agenda/src/br/com/fiap/entity/Contato.java">
 <persistable path="/Agenda/src/br/com/fiap/entity/Contato.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoBO.java" tooltip="Agenda/src/br/com/fiap/bo/ContatoBO.java">
-<persistable path="/Agenda/src/br/com/fiap/bo/ContatoBO.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContatoInterface.java" tooltip="Agenda/src/br/com/fiap/interfaces/ContatoInterface.java">
+<persistable path="/Agenda/src/br/com/fiap/interfaces/ContatoInterface.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Atividade.java" tooltip="Agenda/src/br/com/fiap/entity/Atividade.java">
 <persistable path="/Agenda/src/br/com/fiap/entity/Atividade.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Contato.txt" tooltip="Agenda/Contato.txt">
+<persistable path="/Agenda/Contato.txt"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Integer.class" tooltip="java.lang.Integer">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/C:\/Program Files\/Java\/jdk1.7.0_05\/jre\/lib\/rt.jar&lt;java.lang(Integer.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ClassLoader.class" tooltip="java.lang.ClassLoader">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/C:\/Program Files\/Java\/jdk1.7.0_05\/jre\/lib\/rt.jar&lt;java.lang(ClassLoader.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CadastroContato.java" tooltip="Agenda/src/br/com/fiap/app/CadastroContato.java">
+<persistable path="/Agenda/src/br/com/fiap/app/CadastroContato.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="allclasses-frame.html" tooltip="Agenda/doc/allclasses-frame.html">
+<persistable path="/Agenda/doc/allclasses-frame.html"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ReflectiveCallable.class" tooltip="org.junit.internal.runners.model.ReflectiveCallable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/D:\/Eclipse1\/eclipse indigo\/plugins\/org.junit_4.8.2.v4_8_2_v20110321-1705\/junit.jar&lt;org.junit.internal.runners.model(ReflectiveCallable.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CadastroContato.java" tooltip="Agenda/src/CadastroContato.java">
 <persistable path="/Agenda/src/CadastroContato.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Contatos.txt" tooltip="Agenda/Contatos.txt">
-<persistable path="/Agenda/Contatos.txt"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InvocationTargetException.class" tooltip="java.lang.reflect.InvocationTargetException">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/C:\/Program Files\/Java\/jdk1.7.0_05\/jre\/lib\/rt.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="NativeMethodAccessorImpl.class" tooltip="sun.reflect.NativeMethodAccessorImpl">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Agenda/C:\/Program Files\/Java\/jdk1.7.0_05\/jre\/lib\/rt.jar&lt;sun.reflect(NativeMethodAccessorImpl.class"/>
 </file>
 </mruList>
 </workbench>
