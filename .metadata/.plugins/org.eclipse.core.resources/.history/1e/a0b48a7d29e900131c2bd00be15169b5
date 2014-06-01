@@ -22,20 +22,15 @@ public class ContatoInterface extends Thread{
 	
 	@Override
 	public void run() {
-		iniciar();
+		
 	}
 	public void iniciar() {
 
 		int digito = 0;
 
 		do {
-			
-			try {
-				digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n0- para Sair\n1-Para gravar Contato\n2-Para listar Contato\n3-Para Pesquisar contato "));
-			} catch (NumberFormatException e) {
-				digito = 0;
-			}
-			
+			digito = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite: 0- para Sair; 1-Para gravar Contato; -2 Para listar Contato; 3-Para Pesquisar contato "));
+
 			switch (digito) {
 			case 1:
 				cadastrar();

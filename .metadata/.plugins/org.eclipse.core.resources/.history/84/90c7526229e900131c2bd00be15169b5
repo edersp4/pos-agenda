@@ -20,11 +20,7 @@ public class AtividadeInterface extends Thread {
 		int acao = 0;
 		
 		do {
-			try {
-				acao = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n 0- para Sair;\n 1-Para gravar Atividade\n 2 Para listar Atividade; "));
-			} catch (NumberFormatException e) {
-				acao = 0;
-			}
+			acao = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite:\n 0- para Sair;\n 1-Para gravar Atividade\n 2 Para listar Atividade; "));
 			
 			switch (acao) {
 			case 1:
@@ -42,7 +38,7 @@ public class AtividadeInterface extends Thread {
 
 	@Override
 	public void run() {
-		iniciar();
+		
 	}
 
 	private void listarAtividade() {

@@ -1,0 +1,12 @@
+package br.com.fiap.interfaces;
+
+public class InicioAplicacao {
+	public static void main(String[] args) {
+		AtividadeInterface atividade = new AtividadeInterface();
+		
+		atividade.start();
+		
+		
+		
+	}
+}

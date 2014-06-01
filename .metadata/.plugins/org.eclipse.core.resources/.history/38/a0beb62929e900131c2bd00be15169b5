@@ -43,7 +43,7 @@ public class TestContatoBO {
 		assertNotNull(con.pesquisarContato("Edson")) ;
 	}
 	 
-	 @Test
+//	 @Test
 	 public void testePesquisarContatoSemResultado() {
 		 ContatoBO con = new ContatoBO();
 			assertNull(con.pesquisarContato("Maiara")) ;

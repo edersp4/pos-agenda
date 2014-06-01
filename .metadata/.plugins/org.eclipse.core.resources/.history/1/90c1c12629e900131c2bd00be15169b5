@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,7 +44,7 @@ public class TestContatoBO {
 		assertNotNull(con.pesquisarContato("Edson")) ;
 	}
 	 
-	 @Test
+//	 @Test
 	 public void testePesquisarContatoSemResultado() {
 		 ContatoBO con = new ContatoBO();
 			assertNull(con.pesquisarContato("Maiara")) ;
